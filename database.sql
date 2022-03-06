@@ -26,11 +26,11 @@ CREATE TABLE `users` (
   `password` varchar(60) DEFAULT NULL,
   `userlevel` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`userid`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `users` */
 
-insert  into `users`(`userid`,`username`,`password`,`userlevel`) values (1,'admin','admin','Admin'),(2,'asdasdkasld','laksdlaksldasd','Admin');
+insert  into `users`(`userid`,`username`,`password`,`userlevel`) values (1,'admin11','1asdasd','Admin'),(3,'asdasdkasld1','laksdlaksldasd','User'),(4,'rex','rex','Admin');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
