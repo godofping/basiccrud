@@ -17,6 +17,7 @@
 		<br><br>
 		<label>Password</label>
 		<input type="password" id="password" name="password">
+		<input type="hidden" name="submit" value="createuser">
 		<br><br>
 		<button type="submit">Submit</button>
 	</form>
@@ -30,14 +31,20 @@
 				<th>ID</th>
 				<th>Username</th>
 				<th>Password</th>
+				<th>Actions</th>
 			</tr>
 		</thead>
 		<tbody>
 			<?php foreach ($this->User->fetchAll() as $user): ?>
 				<tr>
-					<td><?php echo $user['userid'] ?></td>
-					<td><?php echo $user['username'] ?></td>
-					<td><?php echo $user['password'] ?></td>
+					<td><?= $user['userid'] ?></td>
+					<td><?= $user['username'] ?></td>
+					<td><?= $user['password'] ?></td>
+					<td>
+						<a href="?p=user-edit&userid=<?= $user['userid'] ?>">
+							<button>Edit</button>
+						</a>
+					</td>
 				</tr>
 			<?php endforeach ?>
 		</tbody>

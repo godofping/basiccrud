@@ -24,6 +24,12 @@ Class Controller
                 exit();
             break;
 
+
+            case ($page === "user-edit"):
+                require "Views/user-edit.php";
+                exit();
+            break;
+
             case ($page === "admins"):
                 require "Views/admins.php";
                 exit();
@@ -35,14 +41,7 @@ Class Controller
             break;
 
             case ($page === "submit"):
-                // print_r($_POST);
-                $data = [
-                    'username' => $_POST['username'],
-                    'password' => $_POST['password'],
-                    'userlevel' => 'Admin',
-                ];
-                echo $this->User->create($data);
-                
+                require "Controllers/Submit.php";
             break;
             
             default:
