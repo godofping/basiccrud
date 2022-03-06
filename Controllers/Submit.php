@@ -21,4 +21,3 @@ elseif ($submit == 'updateuser')
     ];
     echo $this->User->update($data);
 }
-                

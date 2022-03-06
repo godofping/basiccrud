@@ -43,6 +43,14 @@ Class Controller
             case ($page === "submit"):
                 require "Controllers/Submit.php";
             break;
+
+            case ($page == 'deleteuser'):
+                $data = [
+                    'userid' => $_GET['userid'],
+                ];
+                echo $this->User->delete($data);
+            break;
+                
             
             default:
                 require "Views/error.php";

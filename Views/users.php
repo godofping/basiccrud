@@ -44,6 +44,9 @@
 						<a href="?p=user-edit&userid=<?= $user['userid'] ?>">
 							<button>Edit</button>
 						</a>
+						<a href="?p=deleteuser&userid=<?= $user['userid'] ?>">
+							<button>Delete</button>
+						</a>
 					</td>
 				</tr>
 			<?php endforeach ?>
