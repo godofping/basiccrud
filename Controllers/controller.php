@@ -29,6 +29,10 @@ Class Controller
                 exit();
             break;
 
+            case ($page === "test"):
+                print_r($this->User->fetchAll());
+            break;
+
             case ($page === "submit"):
                 // print_r($_POST);
                 $data = [
