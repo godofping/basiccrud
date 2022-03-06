@@ -30,7 +30,8 @@ Class Controller
             break;
 
             case ($page === "test"):
-                print_r($this->User->fetchAll());
+                $users = $this->User->fetchAll();
+                echo $users[0]['username'];
             break;
 
             case ($page === "submit"):
